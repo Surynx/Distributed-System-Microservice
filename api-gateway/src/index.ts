@@ -6,4 +6,4 @@ const app = express();
 
 app.use("/",router);
 
-app.listen(CONFIG.PORT,()=>console.log(`Gateway running at ${CONFIG.PORT}`));
+app.listen(CONFIG.PORT,()=>console.log(`Gateway running at ${CONFIG.PORT}...✅`));
