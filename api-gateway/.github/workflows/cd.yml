@@ -1,0 +1,15 @@
+name: User Service CD
+
+on:
+  workflow_run:
+    workflows: ["User Service CI"]
+    types:
+      - completed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy message
+        run: echo "Ready to deploy to Kubernetes"
