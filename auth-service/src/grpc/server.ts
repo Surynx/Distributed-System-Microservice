@@ -5,7 +5,7 @@ import path from "path"
 
 export default function startGrpcServer ( grpcHandler:any ) {
 
-    const protoFileUrl = path.resolve(__dirname,"../../shared/auth.proto");
+    const protoFileUrl = path.resolve(__dirname,"proto/auth.proto");
 
     const protoDef = protoLoader.loadSync(protoFileUrl);
     const grpcObj : any = grpc.loadPackageDefinition(protoDef);

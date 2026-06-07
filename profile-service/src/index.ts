@@ -10,4 +10,4 @@ app.use(express.json());
 
 app.get("/",verifyService,profileController.getUserProfile);
 
-app.listen(process.env.PROFILE_PORT,()=>console.log(`Profile service running at ${process.env.PORT}`));
+app.listen(process.env.PROFILE_PORT,()=>console.log(`Profile service running at ${process.env.PROFILE_PORT}`));

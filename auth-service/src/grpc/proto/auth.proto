@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package auth;
+
+service AuthService {
+
+    rpc GetLoginInfo (ProfileReq) returns (AuthRes);
+}
+
+message ProfileReq {
+    
+    string userId = 1;
+}
+
+message AuthRes {
+
+    string lastLoginAt = 1;
+}

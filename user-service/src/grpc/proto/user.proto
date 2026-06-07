@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package user;
+
+service UserService {
+
+    rpc GetUserDetail (ProfileReq) returns (UserRes);
+}
+
+message ProfileReq {
+    
+    string userId = 1;
+}
+
+message UserRes {
+
+    string userName = 1;
+    string email = 2;
+}

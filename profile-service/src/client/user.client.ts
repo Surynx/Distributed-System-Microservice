@@ -2,7 +2,7 @@ import * as grpc from "@grpc/grpc-js";
 import * as protoLoader from "@grpc/proto-loader";
 import path from "node:path";
 
-const protoFileUrl = path.resolve(__dirname,"../../shared/user.proto");
+const protoFileUrl = path.resolve(__dirname,"proto/user.proto");
 
 const protoDef = protoLoader.loadSync(protoFileUrl);
 const grpcObj : any = grpc.loadPackageDefinition(protoDef);
