@@ -2,15 +2,13 @@ FROM node:20
 
 WORKDIR /app
 
-COPY auth-service/package*.json ./
+COPY package*.json ./
 
 RUN npm install
 
-COPY auth-service ./
+COPY . .
 
 RUN npm run build
-
-COPY shared ./shared
 
 EXPOSE 3001
 

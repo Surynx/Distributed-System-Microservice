@@ -2,17 +2,15 @@ FROM node:20
 
 WORKDIR /app
 
-COPY profile-service/package*.json ./
+COPY package*.json ./
 
 RUN npm install
 
-COPY profile-service ./
+COPY . .
 
 RUN npm run build
 
-COPY shared ./shared
-
-EXPOSE 3001
+EXPOSE 3003
 
 CMD [ "npm","start" ]
 
